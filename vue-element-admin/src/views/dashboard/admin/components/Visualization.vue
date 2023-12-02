@@ -12,8 +12,8 @@
           <div v-for="(info, index) in infoList" :key="index" class="info-item">
             <div class="info-images">
                 <span  class="image-index">{{ index + 1 }}</span>
-                <img :src="require('I:/desktop/UI/Backen/data/'+info.person)" class="info-image">
-                <img :src="require('I:/desktop/UI/Backen/data/'+info.object)" class="info-image">
+                <img :src="require('I:/desktop/UI/Backen/data/'+info.person)" class="info-image1">
+                <img :src="require('I:/desktop/UI/Backen/data/'+info.object)" class="info-image2">
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ margin: auto;
 }
 
 .left-section {
-width:70%;
+width:60%;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -77,7 +77,7 @@ align-items: center;
 }
 
 .right-section {
-width: 30%;
+width: 40%;
 /* display: flex; */
 overflow-y: auto;
 }
@@ -109,10 +109,17 @@ margin-bottom: 0px;
     line-height: 1.5; /* 设置行高，使得垂直居中 */
 }
 
-.info-image {
+.info-image1 {
     display: flex;
     height:100%;
-    width: 100%;
+    width: 50%;
+    /* max-height: 100px; */
+    margin-right: 30px;
+}
+.info-image2 {
+    display: flex;
+    height:100%;
+    width: 50%;
     /* max-height: 100px; */
     margin-right: 30px;
 }
